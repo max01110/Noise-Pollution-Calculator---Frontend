@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Main from '../components/Main'
 
 
-const NotFoundPage = () => {
-    return (
-        <div>
-            <h1>Index!</h1>
-            <small>Noise Pollution Calculator</small><br/>
-            <small>Yay</small>
-        </div>
-    )
+export class index extends Component {
+    constructor(props) {
+        super(props)
+
+        this.state = {
+            height: 700,
+            someVar: ''
+        }
+        this.handler = this.handler.bind(this)
+
+    }
+
+    handler() {
+        this.setState({
+            someVar: 'some value'
+        })
+    }
+
+    render() {
+    
+        return (
+            <div>
+                <Main/>
+            </div>
+            )
+           
+    }
 }
 
-export default NotFoundPage
+export default index
